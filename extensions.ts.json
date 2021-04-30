@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ipatalas.vscode-postfix-ts",
+    "jenkey2011.string-highlight",
+    "mrmlnc.vscode-scss",
+    "oouo-diogo-perdigao.docthis",
+    "sibiraj-s.vscode-scss-formatter",
+    "stylelint.vscode-stylelint"
+  ]
+}

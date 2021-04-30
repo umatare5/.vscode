@@ -1,0 +1,255 @@
+/*
+  VS Code supports JSON with Comments (jsonc) mode.
+  https://code.visualstudio.com/docs/languages/json#_json-with-comments
+*/
+
+{
+  // My - Accessibility
+  "editor.rulers": [80, 120],
+  "editor.autoClosingBrackets": "never",
+  "editor.autoIndent": "keep",
+  "editor.cursorBlinking": "smooth",
+  "editor.fontFamily": "'OperatorMonoSSmLig Nerd Font', 'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.fontWeight": "100",
+  "editor.letterSpacing": 0.5,
+  "editor.minimap.enabled": false,
+  "editor.renderIndentGuides": true,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.suggestSelection": "first",
+  "editor.fontLigatures": true,
+  "editor.accessibilitySupport": "off",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Normal",
+        "scope": ["keyword.operator"],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "Italic",
+        "scope": [
+          "comment",
+          "keyword.control",
+          "keyword.operator.new",
+          "markup.italic",
+          "storage.type.function.arrow",
+          "storage.type",
+          "storage",
+          "support.function",
+          "variable.language"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Bold-Italic",
+        "scope": [],
+        "settings": {
+          "fontStyle": "bold italic"
+        }
+      }
+    ]
+  },
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": true,
+  "window.openFilesInNewWindow": "off",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "ReUI Default Bordered (react)",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "ayu",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": true,
+  "workbench.tips.enabled": false,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "default",
+      "filenamePattern": "git-rebase-todo"
+    },
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+
+  // My - Editing
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/tmp": true,
+    "**/vendor": true
+  },
+
+  // My - Terminal
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
+
+  // My - iocave.customize-ui
+  "customizeUI.stylesheet": {
+    ".mac:lang(en)": "font-family: OperatorSSm-Light, Hiragino Kaku Gothic W2;",
+    ".tabs-breadcrumbs .file .label-name": "text-decoration: underline;"
+  },
+
+  // My - eamodio.gitlens
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressRebaseSwitchToTextWarning": true
+  },
+
+  // My - humao.rest-client
+  "rest-client.enableTelemetry": false,
+
+  // My - oderwat.indent-rainbow
+  "indentRainbow.errorColor": "rgba(255, 255, 255, 0.1)",
+  "indentRainbow.indentSetter": {
+    "ruby": {
+      "tabSize": 2,
+      "insertSpaces": true
+    }
+  },
+
+  // My - formulahendry.code-runner
+  "code-runner.preserveFocus": true,
+  "code-runner.clearPreviousOutput": true,
+
+  // My - patricklee.vsnotes
+  "vsnotes.defaultNoteName": "Untitled",
+  "vsnotes.defaultNotePath": "~/.vsnotes",
+  "vsnotes.defaultNoteTitle": "{year}_{month}/{title}_{dt}.{ext}",
+  "vsnotes.defaultSnippet": {
+    "langId": "markdown",
+    "name": "vsnote_template_generic"
+  },
+  "vsnotes.ignorePatterns": ["^\\."],
+  "vsnotes.listRecentLimit": 15,
+  "vsnotes.noteTitleConvertSpaces": "_",
+  "vsnotes.templates": ["generic"],
+  "vsnotes.tokens": [
+    {
+      "type": "datetime",
+      "token": "{dt}",
+      "format": "YYYY-MM-DD_HH-mm-ss",
+      "description": "Insert formatted datetime."
+    },
+    {
+      "type": "title",
+      "token": "{title}",
+      "description": "Insert note title from input box.",
+      "format": "Untitled"
+    },
+    {
+      "type": "extension",
+      "token": "{ext}",
+      "description": "Insert file vsnotes.",
+      "format": "md"
+    }
+  ],
+  "vsnotes.treeviewHideFiles": true,
+
+  // My - ms-vscode-remote.remote-ssh
+  "remote.SSH.configFile": "~/.ssh/config.vscode",
+
+  // Go
+  "[go]": {
+    "editor.formatOnSave": true
+  },
+
+  // Go - golang.go
+  "go.alternateTools": {},
+  "go.formatTool": "goimports",
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--config=${workspaceFolder}/.golangci.yml",
+    "--fast",
+    "--fix"
+  ],
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "analyses": { "composites": false }
+  },
+
+  // Typescript/Javascript
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.tsserver.trace": "verbose",
+
+  // Typescript/Javascript - oouo-diogo-perdigao.docthis
+  "docthis.includeMemberOfOnClassMembers": false,
+  "docthis.includeMemberOfOnInterfaceMembers": false,
+  "docthis.includeTypes": false,
+
+  // ESLint - dbaeumer.vscode-eslint
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": ["javascript", "typescript"],
+
+  // Stylelint - stylelint.vscode-stylelint
+  "stylelint.enable": true,
+
+  // Python - ms-python.python
+  "python.showStartPage": false,
+  "python.terminal.activateEnvironment": false,
+
+  // Ruby
+  "[ruby]": {
+    "editor.formatOnSave": true
+  },
+
+  // Ruby - rebornix.ruby
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.format": "rubocop",
+  "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+
+  // HCL - hashicorp.terraform
+  "terraform.languageServer": {
+    "external": true,
+    "args": ["serve"]
+  },
+
+  // Markdown
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdown.preview.fontFamily": "'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
+  "markdown.preview.fontSize": 14,
+
+  // Markdown - yzhang.markdown-all-in-one
+  "markdown.extension.preview.autoShowPreviewToSide": false
+  // Uncategorized
+}

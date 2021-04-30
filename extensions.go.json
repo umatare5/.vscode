@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "golang.go",
+    "yokoe.vscode-postfix-go",
+    "bungcip.better-toml"
+  ]
+}

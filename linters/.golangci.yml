@@ -1,0 +1,75 @@
+run:
+  concurrency: 4
+  timeout: 5m
+  skip-dirs:
+    - .git
+    - .vscode
+    - dist
+    - scripts
+    - tmp
+    - vendor
+  modules-download-mode: readonly
+  allow-parallel-runners: true
+
+output:
+  sort-results: true
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - deadcode
+    - depguard
+    - dogsled
+    - errcheck
+    - exhaustive
+    - exportloopref
+    - funlen
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - gofmt
+    - goimports
+    - golint
+    - gomnd
+    - goprintffuncname
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - lll
+    - nakedret
+    - noctx
+    - nolintlint
+    - rowserrcheck
+    - staticcheck
+    - structcheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - varcheck
+    - whitespace
+
+linters-settings:
+  depguard:
+    list-type: blacklist
+    include-go-root: true
+    packages:
+      - sync/atomic
+      - github.com/stretchr/testify/assert
+  funlen:
+    lines: 100
+    statements: 50
+  lll:
+    line-length: 150
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  exclude-rules:
+  - path: _test.go
+    linters:
+    - errcheck

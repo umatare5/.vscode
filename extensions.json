@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "coenraads.bracket-pair-colorizer-2",
+    "eamodio.gitlens",
+    "formulahendry.code-runner",
+    "humao.rest-client",
+    "iocave.customize-ui",
+    "iocave.monkey-patch",
+    "mechatroner.rainbow-csv",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh-edit",
+    "ms-vscode-remote.remote-ssh",
+    "oderwat.indent-rainbow",
+    "patricklee.vsnotes",
+    "redhat.vscode-yaml",
+    "rubymaniac.vscode-direnv",
+    "skyapps.fish-vscode",
+    "slevesque.vscode-hexdump",
+    "teabyii.ayu",
+    "timonwong.shellcheck",
+    "usernamehw.errorlens"
+  ]
+}

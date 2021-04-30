@@ -1,0 +1,14 @@
+{
+  "vsnote_template_generic": {
+    "prefix": "vsnote_template_generic",
+    "body": [
+      "---",
+      "tags:",
+      "\t- default",
+      "---",
+      "\n# $1 - $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE\n",
+      ""
+    ],
+    "description": "VSNotes Generic Template"
+  }
+}
