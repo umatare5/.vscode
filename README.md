@@ -6,13 +6,13 @@ My Visual Studio Code for Mac settings.
 
 ### settings.json
 
-- Contains settings for all extentions.
+- Contains settings for all extensions.
 
-### extentions.json
+### extensions.json
 
 - Declares common-use extensions.
 
-### extentions.[langName].json
+### extensions.[langName].json
 
 - Declares language-specific extensions.
 
@@ -73,7 +73,7 @@ scripts/install_with_all_extensions.sh
 cp settings.json    "$HOME/Library/Application Support/Code/User/"
 cp keybindings.json "$HOME/Library/Application Support/Code/User/"
 cp snippets/*       "$HOME/Library/Application Support/Code/User/snippets/"
-jq .recommendations[] < extensions.json | xargs -I {} code --install-extension {}
+jq .recommendasions[] < extensions.json | xargs -I {} code --install-extension {}
 ```
 
 ## Changelog
