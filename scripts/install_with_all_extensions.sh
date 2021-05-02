@@ -2,7 +2,7 @@
 
 VSCODE_HOME_DIR="$HOME/Library/Application Support/Code/User"
 VSCODE_SNIPPET_DIR="$VSCODE_HOME_DIR/snippets"
-VSCODE_EXTENSIONS=$(find "${VSCODE_SNIPPET_DIR}" -type f -name "*.json" -exec basename {} \;)
+VSCODE_EXTENSIONS=$(find . -type f -name "extensions*.json" -maxdepth 1 -exec basename {} \;)
 VSCODE_SETTING="settings.json"
 VSCODE_KEYBIND="keybindings.json"
 
