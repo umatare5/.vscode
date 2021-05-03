@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "42crunch.vscode-openapi",
-    "amazonwebservices.aws-toolkit-vscode"
+    "amazonwebservices.aws-toolkit-vscode",
+    "googlecloudtools.cloudcode"
   ]
 }
