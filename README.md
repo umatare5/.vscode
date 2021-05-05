@@ -66,14 +66,16 @@ scripts/install_with_all_extensions.sh
 
 ### Manual
 
-- If you need current files, please backup them manually.
-- For install language-specific extensions, please modify last command.
+- If you need current using files, please backup them manually before.
+- To install language-specific extensions, please modify the `VSCODE_EXTENTION`.
 
 ```bash
 cp settings.json    "$HOME/Library/Application Support/Code/User/"
 cp keybindings.json "$HOME/Library/Application Support/Code/User/"
 cp snippets/*       "$HOME/Library/Application Support/Code/User/snippets/"
-jq .recommendasions[] < extensions.json | xargs -I {} code --install-extension {}
+
+export VSCODE_EXTENTION=extensions.json
+jq .recommendasions[] < ${VSCODE_EXTENTION} | xargs -I {} code --install-extension {}
 ```
 
 ## Changelog
