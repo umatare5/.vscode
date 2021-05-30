@@ -75,7 +75,7 @@ cp keybindings.json "$HOME/Library/Application Support/Code/User/"
 cp snippets/*       "$HOME/Library/Application Support/Code/User/snippets/"
 
 export VSCODE_EXTENTION=extensions.json
-jq .recommendasions[] < ${VSCODE_EXTENTION} | xargs -I {} code --install-extension {}
+jq .recommendations[] < ${VSCODE_EXTENTION} | xargs -I {} code --install-extension {}
 ```
 
 ## Changelog
