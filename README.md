@@ -1,4 +1,4 @@
-# .vscode
+# my-vscode-settings
 
 My Visual Studio Code for Mac settings.
 
@@ -26,27 +26,19 @@ My Visual Studio Code for Mac settings.
 
 - vscode
 
-```bash
-brew cask install visual-studio-code
-```
+  [Visual Studio Code - Download Visual Studio Code](https://code.visualstudio.com/download)
 
 - jq
 
-```bash
-brew install jq
-```
-
-- yarn
-
-```bash
-npm install --global yarn
-```
+  ```bash
+  brew install jq
+  ```
 
 - prettier
 
-```bash
-yarn global add prettier
-```
+  ```bash
+  npm install --global prettier
+  ```
 
 ### Minimum
 
@@ -66,8 +58,8 @@ scripts/install_with_all_extensions.sh
 
 ### Manual
 
-- If you need current using files, please backup them manually before.
-- To install language-specific extensions, please modify the `VSCODE_EXTENTION`.
+- If you need to keep current files, please backup them manually before.
+- To install language-specific extensions, please modify `VSCODE_EXTENTION`.
 
 ```bash
 cp settings.json    "$HOME/Library/Application Support/Code/User/"
@@ -80,5 +72,7 @@ jq .recommendations[] < ${VSCODE_EXTENTION} | xargs -I {} code --install-extensi
 
 ## Changelog
 
-- May 1st, 2021
-  - Initialized
+| Timestamp      | Details    |
+| -------------- | ---------- |
+| May 1st, 2021  | Initialize |
+| May 22th, 2022 | Up to date |
