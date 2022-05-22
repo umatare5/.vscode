@@ -11,15 +11,15 @@
   "editor.cursorBlinking": "smooth",
   "editor.fontFamily": "'OperatorMonoSSmLig Nerd Font', 'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
   "editor.fontSize": 14,
+  "editor.fontWeight": 100,
+  "editor.letterSpacing": 0.5,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "editor.fontWeight": "100",
-  "editor.letterSpacing": 0.5,
   "editor.minimap.enabled": false,
-  "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "editor.suggestSelection": "first",
+  "editor.semanticHighlighting.enabled": true,
   "editor.fontLigatures": true,
   "editor.accessibilitySupport": "off",
   "editor.tokenColorCustomizations": {
@@ -32,11 +32,9 @@
         }
       },
       {
-        "name": "Italic",
+        "name": "Bold",
         "scope": [
           "comment",
-          "keyword.control",
-          "keyword.operator.new",
           "markup.italic",
           "storage.type.function.arrow",
           "storage.type",
@@ -44,6 +42,13 @@
           "support.function",
           "variable.language"
         ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "name": "Italic",
+        "scope": ["keyword.control", "keyword.operator.new"],
         "settings": {
           "fontStyle": "italic"
         }
@@ -57,29 +62,29 @@
       }
     ]
   },
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.hover.delay": 1000,
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.autoUpdate": true,
   "window.openFilesInNewWindow": "off",
-  "window.zoomLevel": 1,
-  "workbench.colorTheme": "ReUI Default Bordered (react)",
-  "workbench.editor.enablePreview": true,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.fontAliasing": "antialiased",
+  "workbench.colorTheme": "Snazzy Light",
   "workbench.iconTheme": "ayu",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.languageDetection": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.fontAliasing": "antialiased",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.statusBar.visible": true,
   "workbench.tips.enabled": false,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "default",
-      "filenamePattern": "git-rebase-todo"
-    },
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default",
+    "*.jpg": "luna.editor"
+  },
 
   // My - Editing
   "files.autoSave": "onFocusChange",
@@ -88,13 +93,45 @@
   "files.exclude": {
     "**/.git": true,
     "**/node_modules": true,
-    "**/tmp": true,
-    "**/vendor": true
+    "**/vendor": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
+
+  // My - Security
+  "security.workspace.trust.untrustedFiles": "open",
 
   // My - Terminal
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
+  "terminal.integrated.fontFamily": "'OperatorMonoSSmLig Nerd Font', 'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": 100,
+  "terminal.integrated.letterSpacing": 0.5,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  // https://glitchbone.github.io/vscode-base16-term/#/railscasts
+  "workbench.colorCustomizations": {
+    "terminal.background": "#3a3a3a", // Default: "#2B2B2B"
+    "terminal.foreground": "#E6E1DC",
+    "terminalCursor.background": "#A6AFB8",
+    "terminalCursor.foreground": "#A6AFB8",
+    "terminal.ansiBlack": "#18262F",
+    "terminal.ansiBlue": "#33B5E1",
+    "terminal.ansiCyan": "#52CBB0",
+    "terminal.ansiGreen": "#7CC844",
+    "terminal.ansiMagenta": "#A363D5",
+    "terminal.ansiWhite": "#A6AFB8",
+    "terminal.ansiYellow": "#E4B51C",
+    "terminal.ansiBrightBlack": "#667581",
+    "terminal.ansiBrightBlue": "#33B5E1",
+    "terminal.ansiBrightCyan": "#52CBB0",
+    "terminal.ansiBrightGreen": "#7CC844",
+    "terminal.ansiBrightMagenta": "#A363D5",
+    "terminal.ansiBrightRed": "#EF5253",
+    "terminal.ansiBrightWhite": "#F5F7FA",
+    "terminal.ansiBrightYellow": "#E4B51C"
+  },
 
   // My - iocave.customize-ui
   "customizeUI.stylesheet": {
@@ -121,46 +158,11 @@
     }
   },
 
-  // My - formulahendry.code-runner
-  "code-runner.preserveFocus": true,
-  "code-runner.clearPreviousOutput": true,
-
-  // My - patricklee.vsnotes
-  "vsnotes.defaultNoteName": "Untitled",
-  "vsnotes.defaultNotePath": "~/.vsnotes",
-  "vsnotes.defaultNoteTitle": "{year}_{month}/{title}_{dt}.{ext}",
-  "vsnotes.defaultSnippet": {
-    "langId": "markdown",
-    "name": "vsnote_template_generic"
-  },
-  "vsnotes.ignorePatterns": ["^\\."],
-  "vsnotes.listRecentLimit": 15,
-  "vsnotes.noteTitleConvertSpaces": "_",
-  "vsnotes.templates": ["generic"],
-  "vsnotes.tokens": [
-    {
-      "type": "datetime",
-      "token": "{dt}",
-      "format": "YYYY-MM-DD_HH-mm-ss",
-      "description": "Insert formatted datetime."
-    },
-    {
-      "type": "title",
-      "token": "{title}",
-      "description": "Insert note title from input box.",
-      "format": "Untitled"
-    },
-    {
-      "type": "extension",
-      "token": "{ext}",
-      "description": "Insert file vsnotes.",
-      "format": "md"
-    }
-  ],
-  "vsnotes.treeviewHideFiles": true,
-
   // My - ms-vscode-remote.remote-ssh
   "remote.SSH.configFile": "~/.ssh/config.vscode",
+
+  // My - shellcheck
+  "shellcheck.exclude": ["[\"1091\"]"],
 
   // Go
   "[go]": {
@@ -182,6 +184,9 @@
     "analyses": { "composites": false }
   },
 
+  // Go - maracko.json-to-go
+  "json-to-go.inputSource": "selection",
+
   // Typescript/Javascript
   "[typescript]": {
     "editor.formatOnSave": true,
@@ -191,7 +196,8 @@
     }
   },
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -203,24 +209,15 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsserver.trace": "verbose",
 
-  // Typescript/Javascript - oouo-diogo-perdigao.docthis
-  "docthis.includeMemberOfOnClassMembers": false,
-  "docthis.includeMemberOfOnInterfaceMembers": false,
-  "docthis.includeTypes": false,
-
   // ESLint - dbaeumer.vscode-eslint
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "npm",
   "eslint.validate": ["javascript", "typescript"],
 
   // Stylelint - stylelint.vscode-stylelint
   "stylelint.enable": true,
-
-  // Python - ms-python.python
-  "python.showStartPage": false,
-  "python.terminal.activateEnvironment": false,
 
   // Ruby
   "[ruby]": {
@@ -235,12 +232,6 @@
   "ruby.useLanguageServer": true,
   "ruby.intellisense": "rubyLocate",
 
-  // HCL - hashicorp.terraform
-  "terraform.languageServer": {
-    "external": true,
-    "args": ["serve"]
-  },
-
   // Markdown
   "[markdown]": {
     "editor.formatOnSave": true,
@@ -249,7 +240,61 @@
   "markdown.preview.fontFamily": "'OperatorMonoSSmLig-Light', 'HiraginoSans-W2'",
   "markdown.preview.fontSize": 14,
 
-  // Markdown - yzhang.markdown-all-in-one
-  "markdown.extension.preview.autoShowPreviewToSide": false
-  // Uncategorized
+  // Terraform - hashicorp.terraform
+  "terraform.languageServer": {
+    "external": true
+  },
+  "terraform.codelens.referenceCount": true,
+
+  // CloudFormation - kddejong.vscode-cfn-lint
+  "redhat.telemetry.enabled": true,
+  "json.schemas": [],
+  "yaml.schemas": {},
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "yaml.validate": false,
+
+  // footsteps
+  "footsteps.maxNumberOfChangesToRemember": 3,
+  "footsteps.highlightColor": "rgb(210, 210, 210)",
+
+  // cloudcode
+  "cloudcode.beta.enableCombinedK8s": false,
+  "cloudcode.beta.enableSkaffoldModules": false,
+  "cloudcode.enableGkeAutopilotSupport": false,
+  "cloudcode.enableNewWelcomePage": false,
+  "cloudcode.enableTelemetry": false,
+  "cloudcode.minikubeStatusBar": false,
+  "cloudcode.yaml.enableKubernetesSupport": false,
+  "cloudcode.yaml.enableMigrateForAnthosSupport": false,
+  "cloudcode.kubectlExecShell": "fish",
+  "cloudcode.beta.enableArtifactRegistry": false,
+  "cloudcode.beta.enableApiBrowserV2": false
 }

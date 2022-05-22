@@ -2,6 +2,9 @@
   "recommendations": [
     "42crunch.vscode-openapi",
     "amazonwebservices.aws-toolkit-vscode",
-    "googlecloudtools.cloudcode"
+    "googlecloudtools.cloudcode",
+    "aws-scripting-guy.cform",
+    "kddejong.vscode-cfn-lint",
+    "cschleiden.vscode-github-actions"
   ]
 }

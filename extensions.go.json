@@ -2,6 +2,8 @@
   "recommendations": [
     "golang.go",
     "yokoe.vscode-postfix-go",
-    "bungcip.better-toml"
+    "bungcip.better-toml",
+    "be5invis.toml",
+    "maracko.json-to-go"
   ]
 }

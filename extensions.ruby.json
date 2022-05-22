@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "rebornix.ruby",
-    "misogi.ruby-rubocop"
+    "misogi.ruby-rubocop",
+    "wingrunr21.vscode-ruby"
   ]
 }
