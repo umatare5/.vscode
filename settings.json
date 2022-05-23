@@ -133,23 +133,23 @@
     "terminal.ansiBrightYellow": "#E4B51C"
   },
 
-  // My - iocave.customize-ui
+  // iocave.customize-ui
   "customizeUI.stylesheet": {
     ".mac:lang(en)": "font-family: OperatorSSm-Light, Hiragino Kaku Gothic W2;",
     ".tabs-breadcrumbs .file .label-name": "text-decoration: underline;"
   },
 
-  // My - eamodio.gitlens
+  // eamodio.gitlens
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.advanced.messages": {
     "suppressRebaseSwitchToTextWarning": true
   },
 
-  // My - humao.rest-client
+  // humao.rest-client
   "rest-client.enableTelemetry": false,
 
-  // My - oderwat.indent-rainbow
+  // oderwat.indent-rainbow
   "indentRainbow.errorColor": "rgba(255, 255, 255, 0.1)",
   "indentRainbow.indentSetter": {
     "ruby": {
@@ -158,10 +158,13 @@
     }
   },
 
-  // My - ms-vscode-remote.remote-ssh
+  // ms-vscode-remote.remote-ssh
   "remote.SSH.configFile": "~/.ssh/config.vscode",
 
-  // My - shellcheck
+  // formulahendry.code-runner
+  "code-runner.enableAppInsights": false,
+
+  // timonwong.shellcheck
   "shellcheck.exclude": ["[\"1091\"]"],
 
   // Go
@@ -247,7 +250,7 @@
   "terraform.codelens.referenceCount": true,
 
   // CloudFormation - kddejong.vscode-cfn-lint
-  "redhat.telemetry.enabled": true,
+  "redhat.telemetry.enabled": false,
   "json.schemas": [],
   "yaml.schemas": {},
   "yaml.customTags": [
@@ -281,11 +284,11 @@
   ],
   "yaml.validate": false,
 
-  // footsteps
+  // wattenberger.footsteps
   "footsteps.maxNumberOfChangesToRemember": 3,
   "footsteps.highlightColor": "rgb(210, 210, 210)",
 
-  // cloudcode
+  // GCP - googlecloudtools.cloudcode
   "cloudcode.beta.enableCombinedK8s": false,
   "cloudcode.beta.enableSkaffoldModules": false,
   "cloudcode.enableGkeAutopilotSupport": false,
@@ -296,5 +299,8 @@
   "cloudcode.yaml.enableMigrateForAnthosSupport": false,
   "cloudcode.kubectlExecShell": "fish",
   "cloudcode.beta.enableArtifactRegistry": false,
-  "cloudcode.beta.enableApiBrowserV2": false
+  "cloudcode.beta.enableApiBrowserV2": false,
+
+  // AWS - amazonwebservices.aws-toolkit-vscode
+  "aws.telemetry": false
 }
